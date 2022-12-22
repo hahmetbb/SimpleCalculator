@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtSolution"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/black"
+        android:ems="10"
+        android:gravity="end|bottom"
+        android:padding="20dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:textColor="@color/white"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/black"
+        android:ems="10"
+        android:gravity="end|bottom"
+        android:padding="20dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="70sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <FrameLayout
+            android:id="@+id/frameLayout1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout5"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/gray"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="AC"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout6"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout1"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/gray"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="C"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout7"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout2"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/gray"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="%"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout3"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtDivide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/orange"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="/"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout9"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/dark_gray"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="7"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout10"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout7"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout5"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/dark_gray"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="8"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout11"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout6"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/dark_gray"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="9"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout7"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout4">
+
+            <TextView
+                android:id="@+id/txtMultiply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/orange"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="*"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout13"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/dark_gray"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="4"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout14"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout7"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout5"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout6">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/dark_gray"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="5"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout15"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout6"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout7">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/dark_gray"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="6"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout7"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/orange"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout17"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout14"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout9">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/dark_gray"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout17"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout15"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout13"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/dark_gray"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout18"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout16"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout14"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout11">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/dark_gray"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout19"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout15"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout12">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/orange"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout17"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout18"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout13"
+            app:layout_constraintWidth_percent="0.5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="4dp"
+                android:background="@drawable/background_number_button_rect"
+                android:backgroundTint="@color/dark_gray"
+                android:gravity="start|center_vertical"
+                android:onClick="btnNumberEvent"
+                android:paddingStart="36dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout18"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout19"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout17"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/dark_gray"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="."
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout19"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout18"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout16">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_number_button"
+                android:backgroundTint="@color/orange"
+                android:gravity="center"
+                android:onClick="btnNumberEvent"
+                android:text="="
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
